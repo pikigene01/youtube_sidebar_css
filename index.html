@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  .sidebar{
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    background: black;
+    color: white;
+  }
+  li{
+    padding: 20px 0px;
+  }
+  input:checked{
+    display: none;
+  }
+  input:checked + .sidebar{
+    display: none;
+  }
+.toggle{
+  margin-left: 205px;
+}
+.toggle span{
+  display: block;
+  margin: 10px 0px;
+  width: 70px;
+  height: 4px;
+  background: black;
+}
+  input:checked + .sidebar + .toggle{
+    margin-left: 0px;
+  }
+</style>
+<body>
+  <div class="container">
+    <input type="checkbox" id="checkbox" />
+    <div class="sidebar">
+      <li>Gene Menu 1</li>
+      <li>Gene Menu 2</li>
+      <li>Gene Menu 3</li>
+      <li>Gene Menu 4</li>
+    </div>
+    <label for="checkbox" class="toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  
+</body>
+</html>
